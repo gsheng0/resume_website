@@ -20,16 +20,18 @@ document.addEventListener("scroll", (e) => {
             offscreen.push(id);
         }
     }
+
 });
 
 document.addEventListener("click", (e) => {
     console.log("On Screen: " + onscreen);
     console.log("Off Screen: " + offscreen);
-    isOnScreen(document.getElementById("box3"));
+
 })
 
 function isOnScreen(element) {
-	var position = element.getBoundingClientRect();
+    
+	var position = element.parentElement.getBoundingClientRect();
     var height = element.offsetHeight;
 
 
@@ -45,3 +47,29 @@ function isOnScreen(element) {
 	}
     return false;
   }
+
+  function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
+
+function unfade(element) {
+    var op = 0.1;  // initial opacity
+    element.style.display = 'block';
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 10);
+}
