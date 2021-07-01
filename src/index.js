@@ -1,33 +1,25 @@
-let onscreen = [];
-let offscreen = [];
+let elements = document.getElementsByClassName("fade");
+let onScreenArr = [];
+let isLoadedArr = [];
 
-console.log(-26 > -175)
-document.addEventListener("scroll", (e) => {
-    onscreen = [];
-    offscreen = [];
-    var allElements = document.getElementsByTagName("*");
-    var allIds = [];
-    for (var i = 0, n = allElements.length; i < n; ++i) {
-        var el = allElements[i];
-        if (el.id) { allIds.push(el.id); }
+init();
+
+function init(){
+    for(let i = 0; i < elements.length; i++){
+        onScreenArr.push(isOnScreen(elements[i]));
+        isLoadedArr.push(false);
     }
-    for(let i = 0; i < allIds.length; i++){
-        var id = allIds[i];
-        if(isOnScreen(document.getElementById(id))){
-            onscreen.push(id);
+    updateOnScreenArr("nothing");
+    for(let i = 0; i < onScreenArr.length; i++){
+        if(!onScreenArr[i]){
+            elements[i].style.opacity = 0.0;
         }
         else{
-            offscreen.push(id);
+            isLoadedArr[i] = true;
         }
     }
-
-});
-
-document.addEventListener("click", (e) => {
-    console.log("On Screen: " + onscreen);
-    console.log("Off Screen: " + offscreen);
-
-})
+    document.addEventListener("scroll", animateElements);
+}
 
 function isOnScreen(element) {
     
@@ -36,32 +28,17 @@ function isOnScreen(element) {
 
 
 
-	// checking whether fully visible
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
 		return true;
 	}
 
-	// checking for partial visibility
-	if(position.top > -1 * height/2 && position.bottom < window.innerHeight + height/2) {
+	if(position.top > -1 * height/4 && position.bottom < window.innerHeight + height/4) {
 		return true;
 	}
     return false;
   }
 
-  function fade(element) {
-    var op = 1;  // initial opacity
-    var timer = setInterval(function () {
-        if (op <= 0.1){
-            clearInterval(timer);
-            element.style.display = 'none';
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
-    }, 50);
-}
-
-function unfade(element) {
+function fadeIn(element) {
     var op = 0.1;  // initial opacity
     element.style.display = 'block';
     var timer = setInterval(function () {
@@ -73,3 +50,20 @@ function unfade(element) {
         op += op * 0.1;
     }, 10);
 }
+
+function updateOnScreenArr(e) {
+    for(let i = 0; i < elements.length; i++){
+        onScreenArr[i] = isOnScreen(elements[i]);
+    }
+}
+
+function animateElements(e) {
+    updateOnScreenArr(e);
+    for(let i = 0; i < elements.length; i++){
+        if(onScreenArr[i] && !isLoadedArr[i]){
+            fadeIn(elements[i]);
+            isLoadedArr[i] = true;
+        }
+    }
+}
+
