@@ -22,11 +22,8 @@ function init(){
 }
 
 function isOnScreen(element) {
-    
 	var position = element.parentElement.getBoundingClientRect();
     var height = element.offsetHeight;
-
-
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
 		return true;
