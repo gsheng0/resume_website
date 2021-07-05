@@ -19,6 +19,15 @@ function init(){
         }
     }
     document.addEventListener("scroll", animateElements);
+    document.getElementById("projects").addEventListener("click", (e) => {
+        window.open('https://brave-bush-05135770f.azurestaticapps.net', '_blank');
+    });
+
+    document.getElementById("regression").addEventListener("click", (e) => {
+        window.open("https://kind-flower-0c07f2d10.azurestaticapps.net", "_blank");
+    })
+
+    
 }
 
 function isOnScreen(element) {
