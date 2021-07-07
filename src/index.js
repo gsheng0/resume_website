@@ -20,6 +20,10 @@ function init(){
         }
     }
 
+    document.getElementById("profile").addEventListener("click", (e) => {
+        window.open("https://docs.google.com/document/d/1oEUiJ2iou16cQjcO3YQ03l6oovUQv9vQ-lxXlYSG_wY/edit?usp=sharing", "_blank")
+    })
+
     document.getElementById("home-nav").addEventListener("click", (e) => {
         var elmnt = document.getElementById("home-anchor");
         elmnt.scrollIntoView({behavior: "smooth", block: "start"});
@@ -74,7 +78,7 @@ function isOnScreen(element) {
 		return true;
 	}
 
-	if(position.top > -1 * height/4 && position.bottom < window.innerHeight + height/4) {
+	if(position.top > -1 * height/8 && position.bottom < window.innerHeight + height/8) {
 		return true;
 	}
     return false;
