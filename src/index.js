@@ -78,7 +78,7 @@ function isOnScreen(element) {
 		return true;
 	}
 
-	if(position.top > -1 * height/8 && position.bottom < window.innerHeight + height/8) {
+	if(position.top > -1 * height/2 && position.bottom < window.innerHeight + height/2) {
 		return true;
 	}
     return false;
