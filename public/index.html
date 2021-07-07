@@ -47,6 +47,8 @@
         .project-cell {
             text-align: center;
             padding-top: 4%;
+
+            margin-bottom: 4%;
         }
 
         .project-desc{
@@ -71,6 +73,12 @@
         #projects{
             margin: auto;
         }
+
+        .section{
+            margin-top: 20%;
+        }
+
+
 
     </style>
   </head>
@@ -104,36 +112,37 @@
 
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="about" class="container">
+    <div class="container">
         <div class="jumbotron" style="text-align: center;">
             <h1>George Sheng</h1>
             <h4>Descriptive text here</h4>
         </div>
     </div>
 
-    <div id="about" class="container">
-        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+    <div id="about" class="container section">
+        <div id="profile_pic" class="col-lg-2 col-md-2 col-sm-6 col-xs-6 fade">
             <img id="profile" src="profile_pic.png" class="img-responsive" width="100%"/>
         </div>
-        <div class="col-lg-10 col-md-10 col-sm-6 col-xs-16">
-            <h5>Hi, my name is George Sheng. I am a rising sophomore attending Stevens Institute of Technolgy, majoring in Computer Science. 
+        <div id="about_me" class="col-lg-10 col-md-10 col-sm-6 col-xs-16 fade">
+            <h2>About Me</h2>
+            <h4>Hi, my name is George Sheng. I am a rising sophomore attending Stevens Institute of Technolgy, majoring in Computer Science. 
                 My hobbies include coding, playing violin, and basketball. I swam for both a club team and my school team throughout high school,
                 and was also a part of the school orchestra, where I was seated second chair for the last two years. I have recently become more 
-                serious regarding computer science due to a combination of both renewed excitement regarding the field and the start of college</h5>
+                serious regarding computer science due to a combination of both renewed excitement regarding the field and the start of college</h3>
         </div>
     </div>
 
-    <div id="projects" class="container row border" style="margin-top: 10%">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border">
-            <div class="project-cell">
+    <div id="projects" class="container row border section" style="margin-top: 10%">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+            <div>
                 <img id="bird-defense" src="bird-defense-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Bird Defense</h3>
                 <h5 class="project-desc">A hackathon project that was originally written in Java converted to a React application to allow for a multiplayer experience.</h5>
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border">
-            <div class="project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+            <div>
                 <img id="regression-calculator" src="regression-calculator-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Regression Calculator</h3>
                 <h5 class="project-desc">A linear regression calculator, using the gradient descent algorithm, initially written in Java. 
@@ -143,8 +152,8 @@
 
         <div class="clearfix visible-sm"></div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border">
-            <div class="project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+            <div>
                 <img id="music-theory" src="music-theory-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Music Theory Library</h3>
                 <h5 class="project-desc">A library written in Java to be able to represent notes, chords, scales, and other concepts from western music theory.</h5>
@@ -153,24 +162,24 @@
 
         <div class="clearfix visible-md"></div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border">
-            <div class="project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+            <div>
                 <img id="minesweeper" src="minesweeper-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Minesweeper</h3>
                 <h5 class="project-desc">Minesweeper game made with Java swing</h5>
             </div>
         </div>
         
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border">
-            <div class="project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+            <div>
                 <img id="doubly-linked-list" src="doubly-linked-list-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Doubly Linked List</h3>
                 <h5 class="project-desc">A linked list, but each node has an additional reference to the previous node</h5>
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border">
-            <div class="project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+            <div>
                 <img id="data-display" src="data-display-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Data Displayer</h3>
                 <h5 class="project-desc">A python application made with tkinter designed for easy viewing and visualization of a large amount of JSON data</h5>
@@ -178,7 +187,7 @@
         </div>
     </div>
 
-    <div class="container-fluid" id="contact" style="margin-bottom: 50px">
+    <div class="container section" id="contact" style="margin-bottom: 50px">
         <div style="margin-right: 45%; width: 10%; margin-left: 45%;">
             <a class="box-border" href="https://github.com/gsheng0">
                 <i class="fa fa-envelope"></i>

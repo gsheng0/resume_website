@@ -15,16 +15,22 @@ function init(){
             elements[i].style.opacity = 0.0;
         }
         else{
+            elements[i].style.opacity = 1.0;
             isLoadedArr[i] = true;
         }
+
     }
     document.addEventListener("scroll", animateElements);
     document.getElementById("bird-defense").addEventListener("click", (e) => {
-        window.open('https://brave-bush-05135770f.azurestaticapps.net', '_blank');
+        window.open('http://bird-defense.gsheng.me', '_blank');
     });
 
     document.getElementById("regression-calculator").addEventListener("click", (e) => {
-        window.open("https://kind-flower-0c07f2d10.azurestaticapps.net", "_blank");
+        window.open("http://regression-calculator.gsheng.me", "_blank");
+    });
+
+    document.getElementById("music-theory").addEventListener("click", (e) => {
+        window.open("https://github.com/gsheng0/Music", "_blank");
     })
 
     
