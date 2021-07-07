@@ -31,7 +31,19 @@ function init(){
 
     document.getElementById("music-theory").addEventListener("click", (e) => {
         window.open("https://github.com/gsheng0/Music", "_blank");
-    })
+    });
+
+    document.getElementById("minesweeper").addEventListener("click", (e) => {
+        window.open("https://github.com/gsheng0/Minesweeper", "_blank");
+    });
+    
+    document.getElementById("doubly-linked-list").addEventListener("click", (e) => {
+        window.open("https://github.com/gsheng0/DoublyLinkedList", "_blank");
+    });
+
+    document.getElementById("data-display").addEventListener("click", (e) => {
+        window.open("https://github.com/gsheng0/JSON-Data-Displayer", "_blank");
+    });
 
     
 }
