@@ -18,8 +18,28 @@ function init(){
             elements[i].style.opacity = 1.0;
             isLoadedArr[i] = true;
         }
-
     }
+
+    document.getElementById("home-nav").addEventListener("click", (e) => {
+        var elmnt = document.getElementById("home-anchor");
+        elmnt.scrollIntoView({behavior: "smooth", block: "start"});
+    })
+
+    document.getElementById("projects-nav").addEventListener("click", (e) => {
+        var elmnt = document.getElementById("projects-anchor");
+        elmnt.scrollIntoView({behavior: "smooth", block: "start"});
+    });
+
+    document.getElementById("about-nav").addEventListener("click", (e) => {
+        var elmnt = document.getElementById("about-anchor");
+        elmnt.scrollIntoView({behavior: "smooth", block: "start"});
+    });
+
+    document.getElementById("contact-nav").addEventListener("click", (e) => {
+        var elmnt = document.getElementById("contact");
+        elmnt.scrollIntoView({behavior: "smooth", block: "start"});
+    });
+
     document.addEventListener("scroll", animateElements);
     document.getElementById("bird-defense").addEventListener("click", (e) => {
         window.open('http://bird-defense.gsheng.me', '_blank');
@@ -44,8 +64,6 @@ function init(){
     document.getElementById("data-display").addEventListener("click", (e) => {
         window.open("https://github.com/gsheng0/JSON-Data-Displayer", "_blank");
     });
-
-    
 }
 
 function isOnScreen(element) {

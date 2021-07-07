@@ -23,7 +23,7 @@
     <style>
         .border{
             border-style: solid;
-            border-width: 1px;
+            border-width: 0.1px;
             border-color: black;
             border-radius: 25px;
         }
@@ -87,39 +87,27 @@
     <nav class="navbar navbar-fixed-top navbar-dark">
         <div class="container-fluid">
           <ul class="nav navbar-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#bird-defense">Projects</a></li>
-            <li><a href="#contact">Contact Me</a></li>
+            <li><a id="home-nav">Home</a></li>
+            <li><a id="about-nav">About</a></li>
+            <li><a id="projects-nav">Projects</a></li>
+            <li><a id="contact-nav">Contact Me</a></li>
           </ul>
         </div>
       </nav>
-
-    <div class="border container" style="margin-bottom: 20px; margin-top: 200px;">
-        <div class="well hidden-sm hidden-md hidden-lg">
-            <p>Screen is extra small</p>
-        </div>
-        <div class="well hidden-md hidden-lg hidden-xs">
-            <p>Screen is small</p>
-        </div>
-        <div class="well hidden-sm hidden-lg hidden-xs">
-            <p>Screen is medium</p>
-        </div>
-        <div class="well hidden-sm hidden-md hidden-xs ">
-            <p>Screen is large</p>
-        </div>
-    </div>
-
-
+    <div class="container-fluid" id="home-anchor"></div>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="container">
+
+    <div class="section container">
         <div class="jumbotron" style="text-align: center;">
             <h1>George Sheng</h1>
             <h4>Descriptive text here</h4>
         </div>
     </div>
 
-    <div id="about" class="container section">
+    <div class="container-fluid" id="about-anchor" style="margin-top:10%"></div>
+
+    <div id="about" class="container" style="margin-top: 10%">
         <div id="profile_pic" class="col-lg-2 col-md-2 col-sm-6 col-xs-6 fade">
             <img id="profile" src="profile_pic.png" class="img-responsive" width="100%"/>
         </div>
@@ -132,8 +120,10 @@
         </div>
     </div>
 
-    <div id="projects" class="container row border section" style="margin-top: 10%">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+    <div id="projects-anchor" class="container-fluid" style="margin-top: 5%"></div>
+
+    <div id="projects" class="container row section" style="margin-top: 5%">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-cell fade">
             <div>
                 <img id="bird-defense" src="bird-defense-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Bird Defense</h3>
@@ -141,7 +131,7 @@
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-cell fade">
             <div>
                 <img id="regression-calculator" src="regression-calculator-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Regression Calculator</h3>
@@ -152,7 +142,7 @@
 
         <div class="clearfix visible-sm"></div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-cell fade">
             <div>
                 <img id="music-theory" src="music-theory-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Music Theory Library</h3>
@@ -162,7 +152,7 @@
 
         <div class="clearfix visible-md"></div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-cell fade">
             <div>
                 <img id="minesweeper" src="minesweeper-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Minesweeper</h3>
@@ -170,7 +160,7 @@
             </div>
         </div>
         
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-cell fade">
             <div>
                 <img id="doubly-linked-list" src="doubly-linked-list-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Doubly Linked List</h3>
@@ -178,7 +168,7 @@
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border project-cell">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-cell fade">
             <div>
                 <img id="data-display" src="data-display-icon.jpg" class="img-responsive desc-img" width="100%" height="30%"/>
                 <h3>Data Displayer</h3>
