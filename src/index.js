@@ -68,6 +68,14 @@ function init(){
     document.getElementById("data-display").addEventListener("click", (e) => {
         window.open("https://github.com/gsheng0/JSON-Data-Displayer", "_blank");
     });
+
+    document.getElementById("2drts").addEventListener("click", (e) => {
+        window.open("https://github.com/gsheng0/Basic-RTS", "_blank");
+    });
+
+    document.getElementById("knowledge-base").addEventListener("click", (e) => {
+        window.open("https://github.com/gsheng0/knowledge_base", "_blank");
+    })
 }
 
 function isOnScreen(element) {
