@@ -46,11 +46,11 @@ function init(){
 
     document.addEventListener("scroll", animateElements);
     document.getElementById("bird-defense").addEventListener("click", (e) => {
-        window.open('http://bird-defense.gsheng.me', '_blank');
+        window.open('http://bird.gsheng.me', '_blank');
     });
 
     document.getElementById("regression-calculator").addEventListener("click", (e) => {
-        window.open("http://regression-calculator.gsheng.me", "_blank");
+        window.open("http://regression.gsheng.me", "_blank");
     });
 
     document.getElementById("music-theory").addEventListener("click", (e) => {
