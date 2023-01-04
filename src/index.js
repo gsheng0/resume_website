@@ -19,67 +19,6 @@ function init(){
             isLoadedArr[i] = true;
         }
     }
-
-    document.getElementById("profile").addEventListener("click", (e) => {
-        window.open("https://docs.google.com/document/d/1oEUiJ2iou16cQjcO3YQ03l6oovUQv9vQ-lxXlYSG_wY/edit?usp=sharing", "_blank")
-    })
-
-    document.getElementById("home-nav").addEventListener("click", (e) => {
-        var elmnt = document.getElementById("home-anchor");
-        elmnt.scrollIntoView({behavior: "smooth", block: "start"});
-    })
-
-    document.getElementById("projects-nav").addEventListener("click", (e) => {
-        var elmnt = document.getElementById("projects-anchor");
-        elmnt.scrollIntoView({behavior: "smooth", block: "start"});
-    });
-
-    document.getElementById("about-nav").addEventListener("click", (e) => {
-        var elmnt = document.getElementById("about-anchor");
-        elmnt.scrollIntoView({behavior: "smooth", block: "start"});
-    });
-
-    document.getElementById("contact-nav").addEventListener("click", (e) => {
-        var elmnt = document.getElementById("contact");
-        elmnt.scrollIntoView({behavior: "smooth", block: "start"});
-    });
-
-    document.addEventListener("scroll", animateElements);
-    document.getElementById("bird-defense").addEventListener("click", (e) => {
-        window.open('http://bird.gsheng.me', '_blank');
-    });
-
-    document.getElementById("regression-calculator").addEventListener("click", (e) => {
-        window.open("http://regression.gsheng.me", "_blank");
-    });
-
-    document.getElementById("music-theory").addEventListener("click", (e) => {
-        window.open("https://github.com/gsheng0/Music", "_blank");
-    });
-
-    document.getElementById("minesweeper").addEventListener("click", (e) => {
-        window.open("https://github.com/gsheng0/Minesweeper", "_blank");
-    });
-    
-    document.getElementById("doubly-linked-list").addEventListener("click", (e) => {
-        window.open("https://github.com/gsheng0/DoublyLinkedList", "_blank");
-    });
-
-    document.getElementById("data-display").addEventListener("click", (e) => {
-        window.open("https://github.com/gsheng0/JSON-Data-Displayer", "_blank");
-    });
-
-    document.getElementById("2drts").addEventListener("click", (e) => {
-        window.open("https://github.com/gsheng0/Basic-RTS", "_blank");
-    });
-
-    document.getElementById("knowledge-base").addEventListener("click", (e) => {
-        window.open("https://github.com/gsheng0/knowledge_base", "_blank");
-    });
-
-    document.getElementById("maze-solver").addEventListener("click", (e) => {
-        window.open("https://github.com/gsheng0/MazeSolver", "_blank");
-    });
 }
 
 function isOnScreen(element) {
