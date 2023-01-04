@@ -2,7 +2,7 @@ let elements = document.getElementsByClassName("fade");
 let onScreenArr = [];
 let isLoadedArr = [];
 
-init();
+
 
 function init(){
     for(let i = 0; i < elements.length; i++){
@@ -75,7 +75,11 @@ function init(){
 
     document.getElementById("knowledge-base").addEventListener("click", (e) => {
         window.open("https://github.com/gsheng0/knowledge_base", "_blank");
-    })
+    });
+
+    document.getElementById("maze-solver").addEventListener("click", (e) => {
+        window.open("https://github.com/gsheng0/MazeSolver", "_blank");
+    });
 }
 
 function isOnScreen(element) {
