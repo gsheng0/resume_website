@@ -125,3 +125,4 @@ function animateElements(e) {
     }
 }
 
+init();
